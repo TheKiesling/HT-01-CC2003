@@ -1,4 +1,15 @@
 public interface Radio {
+  /**
+  @author: Jose Pablo Kiesling Lange
+  @author: Emily Elvia Melissa Perez Alarcon
+  Nombre del programa: Radio.java
+  @version: 
+    - Creacion: 28/01/2022
+    - Última modificacion: 28/01/2022
+  Interfaz con los métodos correspondientes a radio
+  */ 
+
+  //---------------------------MÉTODOS-----------------------------
   public void encenderApagar(); //cambia el estado encendido/apagado
   public String guardarEmisoraActual(int numBoton); //guarda la emisora como favorita en el botón indicado (array de 12 espacios).
   public String seleccionarEmisoraGuardada(int numBoton); //reproduce la emisora guardada en uno de los 12 botones.
