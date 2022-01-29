@@ -13,8 +13,8 @@ public class Carro implements Radio{
     @author: José Pablo Kiesling Lange
     Nombre del programa: Carro.java
     @version: 
-        - Creación: 28/01/2021
-        - Última modificación: 
+        - Creación: 28/01/2022
+        - Última modificación: 29/01/2022
 
     Clase que implementa la interfaz de radio 
     */
@@ -103,7 +103,7 @@ public class Carro implements Radio{
      * getTipoSenal: retorna el tipo de senal
      * @return tipoSenal
      */
-    public Boolean getTipoSenal() {
+    public boolean getTipoSenal() {
         return this.tipoSenal;
     }
     //****************************************************************

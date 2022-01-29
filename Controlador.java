@@ -3,8 +3,8 @@ public class Controlador {
     @author: José Pablo Kiesling Lange
     Nombre del programa: Controlador.java
     @version: 
-        - Creación: 29/10/2021
-        - Última modificación: 30/10/2021
+        - Creación: 28/01/2022
+        - Última modificación: 29/01/2022
 
     Clase que comunica el modelo con la vista y controla sus acciones
     */
@@ -12,7 +12,7 @@ public class Controlador {
     //---------------------------MÉTODOS-----------------------------
     public static void main(String[] args) throws Exception{
         Vista vista = new Vista();
-        Carro carro = new Carro();
+        Carro carro = new Carro(); //Linea a cambiar para implementar clases de compañeros. IMPORTANTE: Solo cambiar TIPO DE DATO, no el nombre de la variable.
 
         try{
             vista.bienvenida();
@@ -30,11 +30,11 @@ public class Controlador {
                 }
                 if (carro.comprobarEncendida()){
                     if (opcion == 2){ //Cambiar de AM a FM
-                        String cambio = carro.cambiarSenal(true);
+                        String cambio = carro.cambiarSenal(false);
                         vista.salida(cambio);
                     }
                     if (opcion == 3){ //Cambiar de FM a AM
-                        String cambio = carro.cambiarSenal(false);
+                        String cambio = carro.cambiarSenal(true);
                         vista.salida(cambio);
                     }
                     if (opcion == 4){ //Avanzar emisora

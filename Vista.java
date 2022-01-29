@@ -18,7 +18,7 @@ public class Vista {
     Nombre del programa: Vista.java
     @version: 
         - Creacion: 28/01/2022
-        - Última modificacion: 
+        - Última modificacion: 29/01/2022
     Clase que tiene como fin ser un sistema I/O para la manipulacion del programa
     */ 
 
