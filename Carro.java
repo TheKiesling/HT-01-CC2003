@@ -54,11 +54,11 @@ public class Carro implements Radio{
      */
     public String guardarEmisoraActual(int numBoton) {
         if (tipoSenal){
-            emisorasGuardadas[numBoton] = AMactual;
+            emisorasGuardadas[numBoton-1] = AMactual;
             return "La estacion " + AMactual + " se ha guardado exitosamente en " + numBoton;
         }
         else{
-            emisorasGuardadas[numBoton] = FMactual;
+            emisorasGuardadas[numBoton-1] = FMactual;
             return "La estacion " + FMactual + " se ha guardado exitosamente en " + numBoton;
         }
         
@@ -71,13 +71,17 @@ public class Carro implements Radio{
      * @return String
      */
     public String seleccionarEmisoraGuardada(int numBoton) {
-        float emisora = emisorasGuardadas[numBoton -1];
-        if (emisora < 200F && tipoSenal)
-            return "Tiene que cambiar el tipo de senal a FM";
-        else if (emisora > 200F && !this.tipoSenal)
-            return "Tiene que cambiar el tipo de senal a AM";
-        else
-            return "Reproduciendo la emisora " + emisora;
+        if (emisorasGuardadas[numBoton - 1] != null){
+            float emisora = emisorasGuardadas[numBoton-1];
+            if (emisora < 200F && tipoSenal)
+                return "Tiene que cambiar el tipo de senal a FM";
+            else if (emisora > 200F && !this.tipoSenal)
+                return "Tiene que cambiar el tipo de senal a AM";
+            else
+                return "Reproduciendo la emisora " + emisora;
+            }
+            else
+            return "No hay una emisora guardada";
     }
     //****************************************************************
 
@@ -115,7 +119,7 @@ public class Carro implements Radio{
         }
         else{
             this.FMactual += 0.2F;
-            if (this.FMactual == 108.1F)
+            if (this.FMactual > 107.9F)
                 this.FMactual = 87.9F;
         }
     }
@@ -132,7 +136,7 @@ public class Carro implements Radio{
         }
         else{
             this.FMactual -= 0.2F;
-            if (this.FMactual == 87.7F)
+            if (this.FMactual < 87.9F)
                 this.FMactual = 107.9F;
         }
     }
