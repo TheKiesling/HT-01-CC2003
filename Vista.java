@@ -67,12 +67,13 @@ public class Vista {
             //Despliegue de menú de opciones  
             System.out.println("\n\nQue desea realizar?");
             System.out.println("\n\n1. Encender/apagar el radio");
-            System.out.println("2. Cambiar de AM a FM");
-            System.out.println("3. Cambiar de FM a AM");
+            System.out.println("2. Cambiar de AM a FM ");
+            System.out.println("3. Cambiar de FM a AM ");
             System.out.println("4. Avanzar emisora");
-            System.out.println("5. Guardar emisora");
-            System.out.println("6. Elegir emisora");
-            System.out.println("7. Salir\n\n");
+            System.out.println("5. Retroceder emisora");
+            System.out.println("6. Guardar emisora");
+            System.out.println("7. Elegir emisora");
+            System.out.println("8. Salir\n\n");
 
             while (!bandera){ //Ciclo para evaluar si se ingresó una opcion válida
                 opcion = Integer.parseInt(scan.nextLine());
@@ -103,7 +104,7 @@ public class Vista {
     //****************************************************************
 
     /*****************************************************************
-     * menuOpcionesBusqueda: despliega el menú de búsqueda y recibe la opción del usuario
+     * botones: despliega los botones de la radio
      * @return opcion
      * @throws Exception 
      * @throws InputMismatchException
@@ -146,16 +147,15 @@ public class Vista {
         }
         return opcion;
     }
-    
     //****************************************************************
 
     /*****************************************************************
-     * pedirnumBoton: pide el numero de boton
+     * pedirBoton: pide el numero de boton
      * @return numBoton
      * @throws Exception
      * @throws InputMismatchException
      */
-    public int botones() throws Exception, InputMismatchException{
+    public int pedirBoton() throws Exception, InputMismatchException{
         int numBoton = 0;
         boolean bandera = false;
 
@@ -181,4 +181,14 @@ public class Vista {
         }
         return numBoton;
     }
+    //****************************************************************
+
+    /*****************************************************************
+     * salida: Imprime un texto en pantalla
+     * @param texto
+     */
+    public void salida(String texto){
+        System.out.println(texto);
+    }
+    //****************************************************************
 }
