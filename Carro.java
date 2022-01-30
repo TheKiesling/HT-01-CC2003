@@ -90,7 +90,7 @@ public class Carro implements Radio{
      * @param opcion
      * @return String
      */
-    public String cambiarSenal(Boolean opcion) {
+    public String cambiarSenal(boolean opcion) {
         this.tipoSenal = opcion;
         if (opcion)
             return "Se ha cambiado a AM. Estación " + AMactual;
