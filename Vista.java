@@ -67,13 +67,12 @@ public class Vista {
             //Despliegue de menú de opciones  
             System.out.println("\n\nQue desea realizar?");
             System.out.println("\n\n1. Encender/apagar el radio");
-            System.out.println("2. Cambiar de AM a FM ");
-            System.out.println("3. Cambiar de FM a AM ");
-            System.out.println("4. Avanzar emisora");
-            System.out.println("5. Retroceder emisora");
-            System.out.println("6. Guardar emisora");
-            System.out.println("7. Elegir emisora");
-            System.out.println("8. Salir\n\n");
+            System.out.println("2. Cambiar de frecuencia ");
+            System.out.println("3. Avanzar emisora");
+            System.out.println("4. Retroceder emisora");
+            System.out.println("5. Guardar emisora");
+            System.out.println("6. Elegir emisora");
+            System.out.println("7. Salir\n\n");
 
             while (!bandera){ //Ciclo para evaluar si se ingresó una opcion válida
                 opcion = Integer.parseInt(scan.nextLine());

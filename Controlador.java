@@ -1,6 +1,7 @@
 public class Controlador {
     /** 
     @author: José Pablo Kiesling Lange
+    @author: Emily Elvia Melissa Perez Alarcon
     Nombre del programa: Controlador.java
     @version: 
         - Creación: 28/01/2022
@@ -18,7 +19,7 @@ public class Controlador {
             vista.bienvenida();
 
             int opcion = -1;
-            while (opcion != 8){
+            while (opcion != 7){
                 opcion = vista.menuOpciones();
 
                 if (opcion == 1){ //Encender o Apagar
@@ -30,29 +31,25 @@ public class Controlador {
                 }
                 if (carro.comprobarEncendida()){
                     if (opcion == 2){ //Cambiar de AM a FM
-                        String cambio = carro.cambiarSenal(false);
-                        vista.salida(cambio);
-                    }
-                    if (opcion == 3){ //Cambiar de FM a AM
                         String cambio = carro.cambiarSenal(true);
                         vista.salida(cambio);
                     }
-                    if (opcion == 4){ //Avanzar emisora
+                    if (opcion == 3){ //Avanzar emisora
                         carro.subirEmisora();
                         String emisora = carro.getEmisoraActual() + "";
                         vista.salida(emisora);
                     }
-                    if (opcion == 5){ //Retroceder emisora
+                    if (opcion == 4){ //Retroceder emisora
                         carro.bajarEmisora();
                         String emisora = carro.getEmisoraActual() + "";
                         vista.salida(emisora);
                     }
-                    if (opcion == 6){ //Guardar emisora
+                    if (opcion == 5){ //Guardar emisora
                         int numBoton = vista.botones();
                         String grabar = carro.guardarEmisoraActual(numBoton);
                         vista.salida(grabar);
                     }
-                    if (opcion == 7){ //Elegir emisora
+                    if (opcion == 6){ //Elegir emisora
                         int numBoton = vista.botones();
                         String emisora = carro.seleccionarEmisoraGuardada(numBoton);
                         vista.salida(emisora);
@@ -60,7 +57,7 @@ public class Controlador {
                 }
                 else
                     vista.salida("El radio está apagado");
-                if (opcion == 8){ //Salir
+                if (opcion == 7){ //Salir
                     vista.despedida();
                 }
             }

@@ -11,6 +11,7 @@
 public class Carro implements Radio{
     /** 
     @author: José Pablo Kiesling Lange
+    @author: Emily Elvia Melissa Perez Alarcon
     Nombre del programa: Carro.java
     @version: 
         - Creación: 28/01/2022
@@ -91,8 +92,8 @@ public class Carro implements Radio{
      * @return String
      */
     public String cambiarSenal(boolean opcion) {
-        this.tipoSenal = opcion;
-        if (opcion)
+        this.tipoSenal = !this.tipoSenal;
+        if (this.tipoSenal)
             return "Se ha cambiado a AM. Estación " + AMactual;
         else
             return "Se ha cambiado a FM. Estación " + FMactual;
